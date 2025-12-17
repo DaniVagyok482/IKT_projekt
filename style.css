@@ -1,0 +1,30 @@
+body{
+    background-image: url(./fnafpicbanner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    color: azure;
+}
+
+.navbar_center{
+    margin: auto;
+    font-size: large;
+}
+
+.nav-link{
+    color: rgb(203, 216, 216);
+}
+
+div{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 1.5rem;
+}
+
+.content{
+    background-color: rgba(117, 117, 117, 0.75);
+}
+
+.navbar{
+    padding: 15rem;
+}
