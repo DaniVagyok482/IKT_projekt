@@ -6,11 +6,16 @@ body{
     color: azure;
     margin-top: 50px;
 }
+h1{
+    font-size: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
 .navbar_center{
     margin: auto;
     font-size: large;
+    font-size: 225%;
 }
-
 .nav-link{
     color: rgb(203, 216, 216);
 }
@@ -18,7 +23,7 @@ body{
 div{
     margin-left: 4rem;
     margin-right: 4rem;
-    padding: 1.5rem;
+    padding: 0.5rem;
 }
 
 .content{
