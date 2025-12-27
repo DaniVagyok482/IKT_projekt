@@ -1,11 +1,18 @@
 body{
-    background-image: url(./fnafpicbanner.jpg);
+    background-image: url(./kepek/hatter1.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(54, 54, 54);
+    background-color: black;
     color: azure;
-    margin-top: 50px;
+    font-size: larger;
 }
+
+@media (max-width: 979px) {
+    .telo-meret {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 h1{
     font-size: 60px;
     margin-bottom: 60px;
@@ -27,7 +34,22 @@ div{
 }
 
 .content{
-    background-color: rgba(27, 27, 27, 0.75);
-    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3rem;
+    overflow: auto;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+button{
+    padding: 0.4rem;
+}
+
+a:hover{
+    color: aqua;
+    size: 10%;
+}
