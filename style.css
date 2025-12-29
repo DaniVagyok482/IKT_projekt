@@ -6,10 +6,18 @@ body{
     font-size: larger;
 }
 
-@media (max-width: 979px) {
+@media(max-width: 979px) {
     .telo-meret {
         margin-left: 0;
         margin-right: 0;
+        text-align: center;
+    }
+
+    .telo-hatter{
+        background-image: url(./kepek/telo-hatter.jpg);
+        background-size: cover;
+        background-repeat: repeat-y;
+        background-position: center;
     }
 }
 
@@ -28,8 +36,8 @@ h1{
 }
 
 div{
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
     padding: 0.5rem;
 }
 
@@ -39,8 +47,14 @@ div{
     overflow: auto;
 }
 
-img{
+#fooldal{
     max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#fnaf1_img{
+    max-width: 40%;
     display: block;
     margin: auto;
 }
@@ -49,7 +63,21 @@ button{
     padding: 0.4rem;
 }
 
-a:hover{
-    color: aqua;
-    size: 10%;
+.nav-link:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(161, 38, 38);
+    font-weight: 500;
+}
+
+li{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.jumpscare{
+    width: 100%;
+}
+
+.leiras{
+    margin-right: 20rem;
 }
