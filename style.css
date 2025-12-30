@@ -1,9 +1,90 @@
-body{
+body {
     background-image: url(./kepek/hatter1.png);
-    background-repeat: no-repeat;
     background-color: black;
     color: azure;
     font-size: larger;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.navbar_center {
+    margin: auto;
+    font-size: large;
+    font-size: 225%;
+}
+
+.nav-link {
+    color: rgb(203, 216, 216);
+}
+
+div {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.behuzas {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding: 0.5rem;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 3rem;
+    overflow: auto;
+}
+
+#fooldal {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#fnaf1_img {
+    max-width: 40%;
+    display: block;
+    margin: auto;
+}
+
+button {
+    padding: 0.4rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(161, 38, 38);
+    font-weight: 500;
+}
+
+li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.jumpscare {
+    width: 100%;
+}
+
+.leiras {
+    margin-right: 20rem;
+}
+
+.videok {
+    width: 70%;
+    border: 2px solid gray;
+    background-color: rgb(17, 17, 17);
+}
+
+.video {
+    width: 100%;
+}
+
+h3 {
+    color: antiquewhite;
 }
 
 @media(max-width: 979px) {
@@ -11,73 +92,17 @@ body{
         margin-left: 0;
         margin-right: 0;
         text-align: center;
+        border-radius: 0px;
     }
 
-    .telo-hatter{
+    .telo-hatter {
         background-image: url(./kepek/telo-hatter.jpg);
         background-size: cover;
         background-repeat: repeat-y;
         background-position: center;
     }
-}
 
-h1{
-    font-size: 60px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-.navbar_center{
-    margin: auto;
-    font-size: large;
-    font-size: 225%;
-}
-.nav-link{
-    color: rgb(203, 216, 216);
-}
-
-div{
-    margin-left: 6rem;
-    margin-right: 6rem;
-    padding: 0.5rem;
-}
-
-.content{
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 3rem;
-    overflow: auto;
-}
-
-#fooldal{
-    max-width: 100%;
-    display: block;
-    margin: auto;
-}
-
-#fnaf1_img{
-    max-width: 40%;
-    display: block;
-    margin: auto;
-}
-
-button{
-    padding: 0.4rem;
-}
-
-.nav-link:hover{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(161, 38, 38);
-    font-weight: 500;
-}
-
-li{
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.jumpscare{
-    width: 100%;
-}
-
-.leiras{
-    margin-right: 20rem;
+    .telo-videok {
+        width: 100%;
+    }
 }
