@@ -50,8 +50,15 @@ div {
     margin: auto;
 }
 
-button {
+.button {
     padding: 0.4rem;
+    background-color: transparent;
+    color: white;
+    border: 0px solid transparent;
+}
+
+.button:hover{
+    color: red;
 }
 
 .nav-link:hover {
@@ -85,6 +92,10 @@ li {
 
 h3 {
     color: antiquewhite;
+}
+
+.kep{
+    max-width: 80%;
 }
 
 @media(max-width: 979px) {
