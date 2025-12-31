@@ -96,6 +96,7 @@ h3 {
 
 .kep{
     max-width: 80%;
+    float: right;
 }
 
 @media(max-width: 979px) {
