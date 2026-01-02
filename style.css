@@ -76,6 +76,14 @@ li {
     width: 100%;
 }
 
+.telo-focim-fnaf8{
+    width: 100%;
+}
+
+.center{
+    text-align: center;
+}
+
 .leiras {
     margin-right: 20rem;
 }
@@ -99,6 +107,34 @@ h3 {
     float: right;
 }
 
+.quiz-kep{
+    display: block;
+    margin: auto;
+    width: 20%;
+}
+
+.gomb{
+    width: 12rem;
+    height: 12rem;
+}
+
+.kozep{
+    text-align: center;
+    margin: auto;
+}
+
+.helyes{
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+}
+
+.helytelen{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+}
+
 @media(max-width: 979px) {
     .telo-meret {
         margin-left: 0;
@@ -115,6 +151,10 @@ h3 {
     }
 
     .telo-videok {
+        width: 100%;
+    }
+
+    .quiz-kep{
         width: 100%;
     }
 }
