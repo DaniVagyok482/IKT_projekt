@@ -131,8 +131,25 @@ h3 {
 
 .helytelen{
     text-align: center;
-    color: red;
+    color: rgb(160, 0, 0);
     text-decoration: underline;
+}
+
+.tovabb{
+    float: right;
+}
+
+.tovabb_gomb{
+    background-color: gray;
+    color: white;
+}
+
+#kerdes2{
+    display: none;
+}
+
+#kerdes3{
+    display: none;
 }
 
 @media(max-width: 979px) {

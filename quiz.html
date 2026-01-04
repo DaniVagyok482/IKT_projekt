@@ -46,29 +46,131 @@
             </header>
         </nav>
         <div class="my-5">
-            <h2 class="center">Ismerd fel az animatronikot:</h2>
-            <div>
-                <img src="./kepek/quiz_kepek/Chica.webp" class="quiz-kep" alt="Sárga csirke">
-                <div class="kozep">
-                    <button onclick="quiz('helytelen')" class="gomb">Withered Chica</button>
-                    <button onclick="quiz('helyes')" class="gomb">Chica</button>
+            <div class="row">
+                <div class="col-md-2 col-sm-10">
+                    <h2>Pontjaid: <div id="pont"></div>
+                    </h2>
                 </div>
-                <div class="kozep">
-                    <button onclick="quiz('helytelen')" class="gomb">Bonnie</button>
-                    <button onclick="quiz('helytelen')" class="gomb">Donald Kacsa</button>
+                <div class="col-md-8 col-sm-10">
+                    <h2 class="center">Ismerd fel az animatronikot:</h2>
                 </div>
             </div>
-            <div class="valasz">
-                
+
+
+            <div id="kerdes1">
+                <img src="./kepek/quiz_kepek/Chica.webp" class="quiz-kep" alt="Sárga csirke">
+                <div class="kozep">
+                    <button onclick="quiz('helytelen')" class="gomb" id="helytelen1">Withered Chica</button>
+                    <button onclick="quiz('helyes')" class="gomb" id="helyes">Chica</button>
+                </div>
+                <div class="kozep">
+                    <button onclick="quiz('helytelen')" class="gomb" id="helytelen2">Bonnie</button>
+                    <button onclick="quiz('helytelen')" class="gomb" id="helytelen3">Donald Kacsa</button>
+                </div>
+                <div class="valasz">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="quiz('tovabb')">Tovább</button>
+                </div>
+            </div>
+            <div id="kerdes2">
+                <img src="./kepek/quiz_kepek/nightmarefreddy.webp" class="quiz-kep" alt="">
+                <div class="kozep">
+                    <button onclick="quiz2('helyes')" class="gomb" id="helyes2">Nightmare Fredbear</button>
+                    <button onclick="quiz2('helytelen')" class="gomb" id="helytelen4">Freddy Fazbear</button>
+                </div>
+                <div class="kozep">
+                    <button onclick="quiz2('helytelen')" class="gomb" id="helytelen5">Fredbear</button>
+                    <button onclick="quiz2('helytelen')" class="gomb" id="helytelen6">Withered Freddy</button>
+                </div>
+                <div class="valasz2">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb2()">Tovább</button>
+                </div>
+            </div>
+            <div id="kerdes3">
+                <img src="./kepek/quiz_kepek/Lefty.webp" class="quiz-kep" alt="">
+                <div class="kozep">
+                    <button onclick="quiz3('helyes')" class="gomb" id="helyes2">Scrap Trap</button>
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen4">Rockstar Freddy</button>
+                </div>
+                <div class="kozep">
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen5">Black Freddy</button>
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen6">Lefty</button>
+                </div>
+                <div class="valasz3">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb2('tovabb2')">Tovább</button>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        function quiz(helyesseg) {
-            if (helyesseg === "helyes") {
+        let pont = 0
+        document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+        function quiz(gomb_fajta) {
+            if (gomb_fajta === "helyes") {
+                document.getElementById("helyes").style.backgroundColor = "green";
+                document.getElementById("helytelen1").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen2").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen3").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-            }else if (helyesseg === "helytelen"){
+                pont = pont + 1
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+            } else if (gomb_fajta === "helytelen") {
+                document.getElementById("helyes").style.backgroundColor = "green";
+                document.getElementById("helytelen1").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen2").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen3").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+            }
+
+            if (gomb_fajta === "tovabb") {
+                document.getElementById("kerdes1").style.display = "none"
+                document.getElementById("kerdes2").style.display = "block"
+            }
+        }
+        function quiz2(gomb_fajta2) {
+            if (gomb_fajta2 === "helyes") {
+                document.getElementById("helyes2").style.backgroundColor = "green";
+                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.querySelector(".valasz2").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
+                pont = pont + 1
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+            } else if (gomb_fajta2 === "helytelen") {
+                document.getElementById("helyes2").style.backgroundColor = "green";
+                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.querySelector(".valasz2").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+            }
+        }
+        function tovabb2(){
+                document.getElementById("kerdes2").style.display = "none"
+                document.getElementById("kerdes3").style.display = "block"
+        }
+        function quiz3(gomb_fajta3) {
+            if (gomb_fajta3 === "helyes") {
+                document.getElementById("helyes2").style.backgroundColor = "green";
+                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.querySelector(".valasz3").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
+                pont = pont + 1
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+            } else if (gomb_fajta3 === "helytelen") {
+                document.getElementById("helyes2").style.backgroundColor = "green";
+                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.querySelector(".valasz3").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
+                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
             }
         }
     </script>
