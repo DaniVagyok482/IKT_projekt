@@ -3,6 +3,7 @@ body {
     background-color: black;
     color: azure;
     font-size: larger;
+    margin-bottom: 50px;
 }
 
 h1 {
@@ -33,7 +34,7 @@ div {
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(29, 29, 29, 0.8);
     border-radius: 3rem;
     overflow: auto;
 }
@@ -131,25 +132,8 @@ h3 {
 
 .helytelen{
     text-align: center;
-    color: rgb(160, 0, 0);
+    color: red;
     text-decoration: underline;
-}
-
-.tovabb{
-    float: right;
-}
-
-.tovabb_gomb{
-    background-color: gray;
-    color: white;
-}
-
-#kerdes2{
-    display: none;
-}
-
-#kerdes3{
-    display: none;
 }
 
 @media(max-width: 979px) {
