@@ -136,6 +136,18 @@ h3 {
     text-decoration: underline;
 }
 
+#kerdes2{
+    display: none;
+}
+
+#kerdes3{
+    display: none;
+}
+
+.tovabb_gomb{
+    float: right;
+}
+
 @media(max-width: 979px) {
     .telo-meret {
         margin-left: 0;

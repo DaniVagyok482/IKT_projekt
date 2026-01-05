@@ -92,12 +92,12 @@
             <div id="kerdes3">
                 <img src="./kepek/quiz_kepek/Lefty.webp" class="quiz-kep" alt="">
                 <div class="kozep">
-                    <button onclick="quiz3('helyes')" class="gomb" id="helyes2">Scrap Trap</button>
-                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen4">Rockstar Freddy</button>
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen7">Scrap Trap</button>
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen8">Rockstar Freddy</button>
                 </div>
                 <div class="kozep">
-                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen5">Black Freddy</button>
-                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen6">Lefty</button>
+                    <button onclick="quiz3('helytelen')" class="gomb" id="helytelen9">Black Freddy</button>
+                    <button onclick="quiz3('helyes')" class="gomb" id="helyes3">Lefty</button>
                 </div>
                 <div class="valasz3">
                 </div>
@@ -117,8 +117,10 @@
                 document.getElementById("helytelen2").style.backgroundColor = "rgb(160, 0, 0)";
                 document.getElementById("helytelen3").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                pont = pont + 1
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                if (pont === 0) {
+                    pont = pont + 1
+                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                }
             } else if (gomb_fajta === "helytelen") {
                 document.getElementById("helyes").style.backgroundColor = "green";
                 document.getElementById("helytelen1").style.backgroundColor = "rgb(160, 0, 0)";
@@ -140,8 +142,10 @@
                 document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
                 document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz2").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                pont = pont + 1
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                if (pont <= 1) {
+                    pont = pont + 1
+                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                }
             } else if (gomb_fajta2 === "helytelen") {
                 document.getElementById("helyes2").style.backgroundColor = "green";
                 document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
@@ -151,24 +155,26 @@
                 document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
             }
         }
-        function tovabb2(){
-                document.getElementById("kerdes2").style.display = "none"
-                document.getElementById("kerdes3").style.display = "block"
+        function tovabb2() {
+            document.getElementById("kerdes2").style.display = "none"
+            document.getElementById("kerdes3").style.display = "block"
         }
         function quiz3(gomb_fajta3) {
             if (gomb_fajta3 === "helyes") {
-                document.getElementById("helyes2").style.backgroundColor = "green";
-                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helyes3").style.backgroundColor = "green";
+                document.getElementById("helytelen7").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen8").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen9").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz3").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                pont = pont + 1
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                if (pont <= 2) {
+                    pont = pont + 1
+                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
+                }
             } else if (gomb_fajta3 === "helytelen") {
-                document.getElementById("helyes2").style.backgroundColor = "green";
-                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helyes3").style.backgroundColor = "green";
+                document.getElementById("helytelen7").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen8").style.backgroundColor = "rgb(160, 0, 0)";
+                document.getElementById("helytelen9").style.backgroundColor = "rgb(160, 0, 0)";
                 document.querySelector(".valasz3").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
                 document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
             }
