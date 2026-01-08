@@ -136,34 +136,6 @@ h3 {
     text-decoration: underline;
 }
 
-#kerdes2{
-    display: none;
-}
-
-#kerdes3{
-    display: none;
-}
-
-#kerdes4{
-    display: none;
-}
-
-#kerdes5{
-    display: none;
-}
-
-#kerdes6{
-    display: none;
-}
-
-#kerdes7{
-    display: none;
-}
-
-.tovabb_gomb{
-    float: right;
-}
-
 @media(max-width: 979px) {
     .telo-meret {
         margin-left: 0;
