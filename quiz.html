@@ -48,15 +48,23 @@
         </nav>
         <div class="my-5">
             <div class="row">
-                <div class="col-md-2 col-sm-10">
+                <div class="col-md-2 col-sm-10" id="ossz_pont">
                     <h2>Pontjaid: <div id="pont"></div>
                     </h2>
                 </div>
-                <div class="col-md-8 col-sm-10">
-                    <h2 class="center" id="feladat">Ismerd fel az animatronikot:</h2>
+                <div class="kerdes">
+                    <h2 class="center" id="kerdes_fajta">Ismerd fel az animatronikot:</h2>
+                    <h2 class="center" id="kerdes_fajta2">Írd be a helyes választ:</h2>
+                    <div id="vege">
+                        <h1 class="center">Quiz vége</h1>
+                        <h2 class="center">Pontjaid száma: <div id="ossz_pontok"></div>
+                            <div id="szazalek"></div>
+                        </h2>
+                    </div>
+                    <div id="meme">
+                    </div>
                 </div>
             </div>
-
 
             <div id="kerdes1">
                 <img src="./kepek/quiz_kepek/Chica.webp" class="quiz-kep" alt="Sárga csirke">
@@ -154,163 +162,52 @@
                     <button class="tovabb_gomb" onclick="tovabb6('tovabb6')">Tovább</button>
                 </div>
             </div>
-            <div class="kerdes7">
-
+            <div id="kerdes7" class="kozep">
+                <h4>Mennyi fizetést kap a karakter az 1. rész végén?(egész számban)</h4>
+                <input id="input1" type="number" />
+                <button onclick="quiz7()">Ellenőrzés</button>
+                <div class="valasz7">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb7('tovabb7')">Tovább</button>
+                </div>
+            </div>
+            <div id="kerdes8" class="kozep">
+                <h4>Írd le az egyik fontos harapás időpontját.</h4>
+                <input id="input2" type="number" />
+                <button onclick="quiz8()">Ellenőrzés</button>
+                <div class="valasz8">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb8('tovabb8')">Tovább</button>
+                </div>
+            </div>
+            <div id="kerdes9" class="kozep">
+                <img class="quiz-kep" src="./kepek/quiz_kepek/purple_guy.png" alt="purple_guy">
+                <h4>Hogyan hívják ezt a karaktert?</h4>
+                <input id="input3" type="text" />
+                <button onclick="quiz9()">Ellenőrzés</button>
+                <div class="valasz9">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb9('tovabb9')">Tovább</button>
+                </div>
+            </div>
+            <div id="kerdes10" class="kozep">
+                <img class="quiz-kep" src="./kepek/quiz_kepek/biteof83.webp" alt="a '83-as harapás">
+                <h4>A síró gyerek meghalt a harapás után.(igaz / hamis)</h4>
+                <input id="input4" type="text" />
+                <button onclick="quiz10()">Ellenőrzés</button>
+                <div class="valasz10">
+                </div>
+                <div class="tovabb">
+                    <button class="tovabb_gomb" onclick="tovabb10('tovabb10')">Tovább</button>
+                </div>
             </div>
         </div>
     </div>
 
-
-
-
-    <script>
-        let pont = 0
-        document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-        function quiz(gomb_fajta) {
-            if (gomb_fajta === "helyes") {
-                document.getElementById("helyes").style.backgroundColor = "green";
-                document.getElementById("helytelen1").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen2").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen3").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont === 0) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta === "helytelen") {
-                document.getElementById("helyes").style.backgroundColor = "green";
-                document.getElementById("helytelen1").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen2").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen3").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-
-            if (gomb_fajta === "tovabb") {
-                document.getElementById("kerdes1").style.display = "none"
-                document.getElementById("kerdes2").style.display = "block"
-            }
-        }
-        function quiz2(gomb_fajta2) {
-            if (gomb_fajta2 === "helyes") {
-                document.getElementById("helyes2").style.backgroundColor = "green";
-                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz2").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont <= 1) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta2 === "helytelen") {
-                document.getElementById("helyes2").style.backgroundColor = "green";
-                document.getElementById("helytelen4").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen5").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen6").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz2").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-        }
-        function tovabb2() {
-            document.getElementById("kerdes2").style.display = "none"
-            document.getElementById("kerdes3").style.display = "block"
-        }
-        function quiz3(gomb_fajta3) {
-            if (gomb_fajta3 === "helyes") {
-                document.getElementById("helyes3").style.backgroundColor = "green";
-                document.getElementById("helytelen7").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen8").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen9").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz3").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont <= 2) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta3 === "helytelen") {
-                document.getElementById("helyes3").style.backgroundColor = "green";
-                document.getElementById("helytelen7").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen8").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen9").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz3").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-        }
-        function tovabb3() {
-            document.getElementById("kerdes3").style.display = "none"
-            document.getElementById("kerdes4").style.display = "block"
-        }
-        function quiz4(gomb_fajta4) {
-            if (gomb_fajta4 === "helyes") {
-                document.getElementById("helyes4").style.backgroundColor = "green";
-                document.getElementById("helytelen10").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen11").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen12").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz4").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont <= 3) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta4 === "helytelen") {
-                document.getElementById("helyes4").style.backgroundColor = "green";
-                document.getElementById("helytelen10").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen11").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen12").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz4").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-        }
-        function tovabb4() {
-            document.getElementById("kerdes4").style.display = "none"
-            document.getElementById("kerdes5").style.display = "block"
-        }
-        function quiz5(gomb_fajta5) {
-            if (gomb_fajta5 === "helyes") {
-                document.getElementById("helyes5").style.backgroundColor = "green";
-                document.getElementById("helytelen13").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen14").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen15").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz5").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont <= 4) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta5 === "helytelen") {
-                document.getElementById("helyes5").style.backgroundColor = "green";
-                document.getElementById("helytelen13").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen14").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen15").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz5").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-        }
-        function tovabb5() {
-            document.getElementById("kerdes5").style.display = "none"
-            document.getElementById("kerdes6").style.display = "block"
-        }
-        function quiz6(gomb_fajta6) {
-            if (gomb_fajta6 === "helyes") {
-                document.getElementById("helyes6").style.backgroundColor = "green";
-                document.getElementById("helytelen16").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen17").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen18").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz6").innerHTML = "<h3 class='helyes'>Helyes válasz!</h3>"
-                if (pont <= 5) {
-                    pont = pont + 1
-                    document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-                }
-            } else if (gomb_fajta6 === "helytelen") {
-                document.getElementById("helyes6").style.backgroundColor = "green";
-                document.getElementById("helytelen16").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen17").style.backgroundColor = "rgb(160, 0, 0)";
-                document.getElementById("helytelen18").style.backgroundColor = "rgb(160, 0, 0)";
-                document.querySelector(".valasz6").innerHTML = "<h3 class='helytelen'>Helytelen válasz!</h3>"
-                document.querySelector("#pont").innerHTML = `<p>${pont}</p>`
-            }
-        }
-        function tovabb6() {
-            document.getElementById("kerdes6").style.display = "none"
-            document.getElementById("kerdes7").style.display = "block"
-        }
+    <script src="./quiz.js">
     </script>
 </body>
 
