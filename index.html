@@ -43,49 +43,60 @@
                     <li class="nav-item">
                         <a class="nav-link" href="quiz.html">Quiz játék</a>
                     </li>
+                    <li class="nav-item meno-gomb">
+                        <p class="nav-link">HU-ENG</p>
+                        <label class="switch">
+                            <input onclick="nyelv('oldal1')" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
                 </ul>
             </header>
         </nav>
 
-        <div class="my-5 telo-meret">
+            <div class="my-5 telo-meret tartalom-magyar">
 
-            <p>
-                A <b>Five Nights at Freddy's</b> rövidebben FNaF, egy független multimédiás franchise, amelyet
-                Scott Cawthon hozott létre, és eredetileg még csak videojátékként indult 2014. augusztus 8-án. A
-                franchise azóta világszerte népszerűvé vált.
-            </p>
-            <p>
-                A franchise jelenleg összesen <b>28 videojátékból</b> (11 alapjáték, 7 spin-off, 6 DLC és 4 trolljáték),
-                <b>53
-                    könyvből</b> (8 regény, 20 antológia, 9 képregény, 6 útikönyv, 3 színezőkönyv és 7 vegyes könyv), 3
-                horror
-                attrakcióból, <b>2 filmből</b>, több crossoverből, rengeteg árucikkből és még sok másból áll, de most
-                csak a
-                videójátékokról lesz szó
-            </p>
-            <p>
-                Az alapsorozat, olyan videojátékok tartalmaz, amelyeket elsősorban a Scottgames, LLC (Scott
-                Cawthon) és a Steel Wool Studios, Inc. fejlesztett és adta ki. Minden játék ugyanazt a kanonikus
-                folytonosságot hordozza magában.
-                Egyes címek további tartalommal rendelkeznek különféle DLC-k formájában, amelyek jelentősen
-                hozzájárulnak a
-                játékhoz. Fontos azonban megjegyezni, hogy egyes DLC-k nem részei a kanonikus folytonosságnak.
-            </p>
-            <p>
-                Jelenleg az összes játék a stemen elérhető azonban közben
-                a ScottGames.com volt Scott Cawthon fő weboldala, ez a weboldal röviden
-                bemutatta az összes FNaF játékot, Scott Cawthon korábban számos játékához
-                (például a The Pilgrim's Progress-hez) tett közzé információkat, de az FNaF 3 előzeteseitől kezdve azóta
-                is számos FNAF-fel kapcsolatos tartalomhoz tesz közzé előzeteseket.
-                <br>
-                Azonban mára már semmi sem található ezen a weboldalon
-            </p>
-        </div>
-        <div>
-            <h4><button id="erdekesseg">érdekességek</button></h4>
-        </div>
-        <div id="szoveg" class="telo-meret" style="display: none;">
-            <ul>
+                <p>
+                    A <b>Five Nights at Freddy's</b> rövidebben FNaF, egy független multimédiás franchise, amelyet
+                    Scott Cawthon hozott létre, és eredetileg még csak videojátékként indult 2014. augusztus 8-án. A
+                    franchise azóta világszerte népszerűvé vált.
+                </p>
+                <p>
+                    A franchise jelenleg összesen <b>28 videojátékból</b> (11 alapjáték, 7 spin-off, 6 DLC és 4
+                    trolljáték),
+                    <b>53
+                        könyvből</b> (8 regény, 20 antológia, 9 képregény, 6 útikönyv, 3 színezőkönyv és 7 vegyes
+                    könyv), 3
+                    horror
+                    attrakcióból, <b>2 filmből</b>, több crossoverből, rengeteg árucikkből és még sok másból áll, de
+                    most
+                    csak a
+                    videójátékokról lesz szó
+                </p>
+                <p>
+                    Az alapsorozat, olyan videojátékok tartalmaz, amelyeket elsősorban a Scottgames, LLC (Scott
+                    Cawthon) és a Steel Wool Studios, Inc. fejlesztett és adta ki. Minden játék ugyanazt a kanonikus
+                    folytonosságot hordozza magában.
+                    Egyes címek további tartalommal rendelkeznek különféle DLC-k formájában, amelyek jelentősen
+                    hozzájárulnak a
+                    játékhoz. Fontos azonban megjegyezni, hogy egyes DLC-k nem részei a kanonikus folytonosságnak.
+                </p>
+                <p>
+                    Jelenleg az összes játék a stemen elérhető azonban közben
+                    a ScottGames.com volt Scott Cawthon fő weboldala, ez a weboldal röviden
+                    bemutatta az összes FNaF játékot, Scott Cawthon korábban számos játékához
+                    (például a The Pilgrim's Progress-hez) tett közzé információkat, de az FNaF 3 előzeteseitől kezdve
+                    azóta
+                    is számos FNAF-fel kapcsolatos tartalomhoz tesz közzé előzeteseket.
+                    <br>
+                    Azonban mára már semmi sem található ezen a weboldalon
+                </p>
+            </div>
+            <div>
+                <h4><button id="erdekesseg">érdekességek</button></h4>
+            </div>
+            <div id="szoveg" class="telo-meret" style="display: none;">
+                <ul>
                     <li>
                         A névvel ellentétben egyik játéban se töltünk el 5 napot a pizzériában hanem többet(mint pl. az
                         első
@@ -110,7 +121,8 @@
                         olyan
                         koncepciókat is hozzáadott, mint pl. a Sister Location cselekménye.
                     </li>
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
     <script>
@@ -120,6 +132,17 @@
         gomb.addEventListener("click", () => {
             szoveg.style.display = "block";
         });
+
+        function nyelv(oldal) {
+            document.getElementById("tartalom-magyar").style.display = "none"
+            if (oldal === "oldal1") {
+                if (document.getElementById("tartalom-magyar").style.display === "block") {
+                    document.getElementById("tartalom-magyar").style.display = "none"
+                } else if (document.getElementById("tartalom-magyar").style.display === "none") {
+                    document.getElementById("tartalom-magyar").style.display = "block"
+                }
+            }
+        }
     </script>
 </body>
 

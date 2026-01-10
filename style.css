@@ -36,7 +36,7 @@ div {
 .content {
     background-color: rgba(29, 29, 29, 0.8);
     border-radius: 3rem;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 #fooldal {
@@ -62,13 +62,13 @@ div {
     border: 0px solid transparent;
 }
 
-.button:hover{
+.button:hover {
     color: red;
 }
 
 .nav-link:hover {
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius:10px ;
+    border-radius: 10px;
     color: rgb(161, 38, 38);
     font-weight: 500;
 }
@@ -82,11 +82,11 @@ li {
     width: 100%;
 }
 
-.telo-focim-fnaf8{
+.telo-focim-fnaf8 {
     width: 100%;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -108,77 +108,160 @@ h3 {
     color: antiquewhite;
 }
 
-.kep{
+.kep {
     max-width: 80%;
     float: right;
 }
 
-.quiz-kep{
+.quiz-kep {
     display: block;
     margin: auto;
     width: 20%;
 }
 
-.gomb{
+.gomb {
     width: 12rem;
     height: 12rem;
 }
 
-.kozep{
+.kozep {
     text-align: center;
     margin: auto;
 }
 
-.helyes{
+.helyes {
     text-align: center;
     color: green;
     text-decoration: underline;
 }
 
-.helytelen{
+.helytelen {
     text-align: center;
     color: red;
     text-decoration: underline;
 }
 
-#kerdes2{
+#kerdes2 {
     display: none;
 }
 
-#kerdes3{
+#kerdes3 {
     display: none;
 }
 
-#kerdes4{
+#kerdes4 {
     display: none;
 }
 
-#kerdes5{
+#kerdes5 {
     display: none;
 }
 
-#kerdes6{
+#kerdes6 {
     display: none;
 }
 
-#kerdes7{
+#kerdes7 {
     display: none;
 }
 
-#kerdes8{
+#kerdes8 {
     display: none;
 }
 
-#kerdes9{
+#kerdes9 {
     display: none;
 }
 
-#kerdes10{
+#kerdes10 {
     display: none;
 }
 
-.tovabb_gomb{
+.tovabb_gomb {
     float: right;
+}
+
+#vege {
+    display: none;
+}
+
+.kerdes {
+    text-align: center;
+}
+
+#kerdes_fajta2 {
+    display: none;
+}
+
+#input1 {
+    margin-top: 1.5rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: gray;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: rgb(20, 20, 20);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px gray;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.meno-gomb{
+    margin-left: 1.5rem;
+}
+
+#tartalom-magyar{
+    display: block;
 }
 
 @media(max-width: 979px) {
@@ -200,7 +283,7 @@ h3 {
         width: 100%;
     }
 
-    .quiz-kep{
+    .quiz-kep {
         width: 100%;
     }
 }
