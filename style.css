@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(./kepek/hatter1.png);
     background-color: black;
@@ -256,11 +260,11 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
-.meno-gomb{
+.meno-gomb {
     margin-left: 1.5rem;
 }
 
-#tartalom-magyar{
+#tartalom-magyar {
     display: block;
 }
 
@@ -286,4 +290,14 @@ input:checked+.slider:before {
     .quiz-kep {
         width: 100%;
     }
+}
+
+.easteregg {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 100%;
 }
